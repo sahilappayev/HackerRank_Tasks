@@ -160,14 +160,25 @@ for i in A:
 print(sum)
 
 # The Captain's Room----------------------------------------------------------------
-# Not completed
-n = int(input())
-l = list(map(int, input().split()))
+
+# n = int(input())
+# l = list(map(int, input().split()))
+# s = set(l)
+#
+# for i in s:
+#     if l.count(i) == 1:
+#         print(i)
+
+k = int(input())
+l = list(map(int, input().split(" ")))
 s = set(l)
 
-for i in s:
-    if l.count(i) == 1:
-        print(i)
+sumList = sum(l)
+sumSet = sum(s)
+
+captainDif = (sumSet * k) - sumList
+
+print(captainDif // (k - 1))
 
 # Check Subset-----------------------------------------------------------------------
 

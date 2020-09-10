@@ -69,6 +69,58 @@ if __name__ == '__main__':
     count = count_substring(string, sub_string)
     print(count)
 
+# String Validators-------------------------------------------
+
+if __name__ == '__main__':
+    s = input()
+
+
+def any_alnum():
+    for x in range(0, len(s)):
+        if (s[x].isalnum()):
+            return True
+            break
+    return False
+
+
+def any_alpha():
+    for j in range(0, len(s)):
+        if (s[j].isalpha()):
+            return True
+            break
+    return False
+
+
+def any_digit():
+    for i in range(0, len(s)):
+        if (s[i].isdigit()):
+            return True
+            break
+    return False
+
+
+def any_lower():
+    for k in range(0, len(s)):
+        if (s[k].islower()):
+            return True
+            break
+    return False
+
+
+def any_upper():
+    for l in range(0, len(s)):
+        if (s[l].isupper()):
+            return True
+            break
+    return False
+
+
+print(any_alnum())
+print(any_alpha())
+print(any_digit())
+print(any_lower())
+print(any_upper())
+
 # Text Alignment------------------------------------------------------
 
 thickness = int(input())  # This must be an odd number
@@ -128,7 +180,7 @@ if __name__ == '__main__':
     print_formatted(n)
 
 
-# Capitalize!
+# Capitalize!-----------------------------------------------------------
 
 def solve(s):
     strings = s.split(' ')
@@ -142,6 +194,7 @@ def solve(s):
 
 
 import os
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 

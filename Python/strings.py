@@ -205,3 +205,26 @@ if __name__ == '__main__':
     fptr.write(result + '\n')
 
     fptr.close()
+
+
+# Merge the Tools!---------------------------------------------
+
+def merge_the_tools(string, k):
+    strings = list()
+    for i in range(int(len(string) / k)):
+        start = i * k
+        end = (i + 1) * k
+        t = string[start:end]
+        strings.append(t)
+
+    for j in strings:
+        u = str()
+        for n in j:
+            if n not in u:
+                u += n
+        print(u)
+
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)

@@ -193,14 +193,14 @@ for i in range(t):
     print(a.issubset(b))
 
 # Check Strict Superset-----------------------------------------------------------------
-# Not completed
+
 A = set(map(int, input().split()))
 n = int(input())
-check = False
+check = True
 for i in range(n):
     s = set(map(int, input().split()))
-    if A.issuperset(s) and len(A) > len(s):
-        check = True
+    if A.issuperset(s):
+        continue
     else:
         check = False
 print(check)

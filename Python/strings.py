@@ -228,3 +228,38 @@ def merge_the_tools(string, k):
 if __name__ == '__main__':
     string, k = input(), int(input())
     merge_the_tools(string, k)
+
+
+# Minion Game--------------------------------------------------
+# Not finished yet
+
+def minion_game(string):
+    vovels = 'AEIOU'
+    stuart = 0
+    kevin = 0
+    check = False
+    l = len(string)
+
+    for i in range(1, (l + 1)):
+        sub = string[:i]
+        for j in range(l - len(sub) + 1):
+            if string[i:(len(sub) + i)] == sub:
+                stuart += 1
+
+    for s in string:
+        if s in vovels:
+            index = string.index(s)
+            check = True
+        if check:
+            end = index
+            for p in range(1, (l + 1)):
+                end += 1
+                sub1 = string[index:end]
+                for k in range(l - len(sub1) + 1):
+                    if string[k:(len(sub1) + k)] == sub:
+                        kevin += 1
+        break
+    if stuart > kevin:
+        print('Stuart ', stuart)
+    else:
+        print('Kevin ', kevin)

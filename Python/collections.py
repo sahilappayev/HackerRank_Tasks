@@ -64,3 +64,24 @@ for _ in range(N):
 
 for item, price in items.items():
     print(item, price)
+
+# Collections.deque()-------------------------------------------------------
+
+from collections import deque
+
+d = deque()
+
+for _ in range(int(input().strip())):
+    c = list(map(str, input().split()))
+    if (c[0] == 'append'):
+        d.append(int(c[1]))
+    elif (c[0] == 'pop'):
+        d.pop()
+    elif (c[0] == 'popleft'):
+        d.popleft()
+    elif (c[0] == 'appendleft'):
+        d.appendleft(c[1])
+
+l = list(d)
+for i in l:
+    print(i, end=' ')
